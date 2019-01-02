@@ -1,0 +1,20 @@
+doctype:5
+html
+    head
+        style.
+            h1 {
+                color: blue
+            }
+            ul {
+                display: flex;
+            }
+            ul>li {
+                margin-right: 20px
+            }
+    body
+        include partials/nav.pug
+        h1 Hello Express !
+        a(href='/about') about
+        -
+            var getTime = `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`
+        p Time now: #{getTime}
