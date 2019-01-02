@@ -1,6 +1,9 @@
 const express = require('express');
 const pug = require('pug');
 
+// порт, который будет динамически меняться при подключении к Heroku  
+const port = process.env.PORT || 3000;
+
 var app = express();
 // PUG будет использоваться EXPRESSом для создаия шаблонов
 app.set('view engine', 'pug');
@@ -27,4 +30,6 @@ app.get('/about', function(request, response) {
     response.render('header', {title: 'Это сделал ПУГ', subTitle: 'Да да это PUG'});
 });
 
-app.listen(3000);
+app.listen(port, function() {
+    console.log(`Succesfull connection to the port ${port}`);
+});
