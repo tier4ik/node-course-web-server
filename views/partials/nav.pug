@@ -1,6 +1,5 @@
 nav
     ul
-        for i in [1, 2 ,3, 4]
-            li= i
-                |
-                |kykyska
+        for i in ['HOME', 'PROJECTS', 'ABOUT', 'HELP']
+            li
+                a(href='/'+i)= i

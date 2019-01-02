@@ -30,6 +30,10 @@ app.get('/about', function(request, response) {
     response.render('header', {title: 'Это сделал ПУГ', subTitle: 'Да да это PUG'});
 });
 
+app.get('/projects', function(request, response) {
+    response.render('projects');
+});
+
 app.listen(port, function() {
     console.log(`Succesfull connection to the port ${port}`);
 });
